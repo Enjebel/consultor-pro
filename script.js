@@ -24,30 +24,4 @@ function toggleSidebar() {
       });
     }
   });
-  // EmailJS SDK 
-<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-
-  (function() {
-    emailjs.init("a0FstyrySQbwobu5a"); // 👈 Replace this with your actual public key
-  })();
-
-
-
-    // === Contact Form Submission with EmailJS ===
-document.addEventListener("DOMContentLoaded", function () {
-  const form = document.getElementById("contactForm");
-  if (form) {
-    form.addEventListener("submit", function (e) {
-      e.preventDefault();
-
-      emailjs.sendForm("service_9mbx4as", "template_x12i50f", this)
-        .then(function () {
-          document.getElementById("formMessage").textContent = "Message sent successfully!";
-          form.reset();
-        }, function (error) {
-          document.getElementById("formMessage").textContent = "Failed to send message.";
-          console.error("EmailJS Error:", error);
-        });
-    });
-  }
-});
+  
